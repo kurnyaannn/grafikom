@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Bresenham</title>
+
+        <link rel="stylesheet" href="makeup.css">
+    </head>
+    <body>
+        <h1>Bresenham Circle Visualizer</h1>
+        <div class="container">
+            <div class="visualizer">
+                <div class="bresenham">
+                    <canvas width="500" height="500"></canvas>
+                </div>
+                <form id="dataInput">
+                    <h2>Input</h2>
+                    <span class="fieldTitle">Anchor Point</span><br>
+                    <input type="text" class="field" id="xa" placeholder="X">
+                    <input type="text" class="field" id="ya" placeholder="Y"><br>
+                    <span class="fieldTitle">Radius</span><br>
+                    <input type="text" class="field" id="rad" placeholder="R"><br>
+                    <button type="button" class="tombolS" onclick="userInput()">Submit</button>
+                    <button type="button" class="tombolR" onclick="userReset()">Reset</button>
+                </form>
+            </div>
+        </div>
+
+        <script src="skripjawa.js"></script>
+    </body>
+</html>
