@@ -5,17 +5,17 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Bresenham</title>
 
-        <link rel="stylesheet" href="makeup.css">
+        <link rel="stylesheet" href="../css/makeup.css" type="text/css"/>
     </head>
-    <body>
+    <body onload="drawCanvas()">
         <h1>Bresenham Circle Visualizer</h1>
         <div class="container">
             <div class="visualizer">
                 <div class="bresenham">
-                    <canvas width="500" height="500"></canvas>
+                    <canvas width="400" height="400" onclick="showCoords(event)"></canvas>
                 </div>
                 <form id="dataInput">
-                    <h2>Input</h2>
+                    <h2 class="headline">Input</h2>
                     <span class="fieldTitle">Anchor Point</span><br>
                     <input type="text" class="field" id="xa" placeholder="X">
                     <input type="text" class="field" id="ya" placeholder="Y"><br>
@@ -23,10 +23,38 @@
                     <input type="text" class="field" id="rad" placeholder="R"><br>
                     <button type="button" class="tombolS" onclick="userInput()">Submit</button>
                     <button type="button" class="tombolR" onclick="userReset()">Reset</button>
+                    <h2>Koordinat</h2>
+                    <span>X : <span id="coorX"></span></span> | 
+                    <span>Y : <span id="coorY"></span></span>
                 </form>
             </div>
         </div>
+        <hr class="separator">
+        <div class="intro">
+            <h2 style="text-align: center;">
+                About This Project
+            </h2>
+            <div class="content">
+                <p>
+                    - Dibuat menggunakan canvas size 400 x 400 px <br>
+                    - Grid size 20 px / box <br>
+                    - Letakan pointer pada kanvas untuk mengetahui Koordinat** <br>
+                    - Anchor Point untuk menentukan titik pusat <br>
+                    - Radius untuk menentukan radius lingkaran <br>
+                </p>
+                <p>
+                    * Terdapat offset &#xb1; 7-8 px
+                </p>
+                <p>
+                    <a href="https://en.wikipedia.org/wiki/Midpoint_circle_algorithm">Bresenham Circle Algorithm (wiki)</a>
+                </p>
+            </div>
+            <footer>
+                &copy; M Humam Wahisyam | Yayang Kurnia
+            </footer>
+            
+        </div>
 
-        <script src="skripjawa.js"></script>
+        <script src="../js/skripjawa.js"></script>
     </body>
 </html>

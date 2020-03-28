@@ -2,7 +2,8 @@
 
 html{
     scroll-behavior: smooth;
-    font-family: 'Lato', sans-serif;
+	font-family: 'Lato', sans-serif;
+	background-color: rgb(230, 230, 230);
 }
 body.pushable{
     -webkit-font-smoothing: antialiased;
@@ -10,10 +11,11 @@ body.pushable{
 }
 h1{
     text-align: center;
-    margin: 0;
+    margin: 20px 0 0 0;
 }
 canvas{
-    padding: 5px;
+	padding: 5px;
+	transform: scaleY(-1);
 }
 .container {
     position: relative;
@@ -47,10 +49,15 @@ canvas{
     margin: 25px;
 }
 .bresenham{
-    margin: 15px;
+	margin: 15px;
+	overflow-x: visible;
 }
 #dataInput{
     padding: 25px 15px;
+}
+.headline{
+	padding-top: 0px;
+	margin-top: 0px;
 }
 h2{
     position: relative;
@@ -119,8 +126,22 @@ h2:after{
 span{
     font-weight: bold;
 }
+.separator{
+	max-width: 95%;
+}
+.content{
+	margin-left: 50px;
+}
+footer {
+    margin-top: auto;
+	font-size: 0.8rem;
+	text-align: center;
+}
 @media screen and (max-width: 900px){
 	.visualizer{
 		grid-template-columns: 1fr;
+	}
+	.separator{
+		min-width: 50%;
 	}
 }

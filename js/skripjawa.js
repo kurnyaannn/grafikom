@@ -1,29 +1,65 @@
 /** Canvas Here **/
 const canvas = document.querySelector('canvas')
 const ctx = canvas.getContext('2d')
-ctx.fillStyle = 'black'
+ctx.translate(0, 0);
+ctx.fillStyle = 'gray'
 ctx.fillRect(0, 0, ctx.canvas.width, ctx.canvas.height)
 
+function drawCanvas(){
+    var canvas = document.querySelector('canvas');
+    if (canvas.getContext){
+        var context = canvas.getContext('2d');
+        for(var x=1;x<400;x+=20){
+            context.moveTo(0, x);
+            context.lineTo(400, x);
+        }
+        for(var y=1; y<400; y+=20){
+            context.moveTo(y, 400);
+            context.lineTo(y, 0);
+        }
+        context.strokeStyle='white';
+        context.stroke();
+    }
+}
+
+canvas.addEventListener("mousemove", function (evt) {
+    var mousePos = getMousePos(canvas, evt);
+    coorX = parseInt(mousePos.x)
+    coorY = parseInt(mousePos.y)
+    document.getElementById('coorX').innerHTML = coorX;
+    document.getElementById('coorY').innerHTML = coorY;
+}, false);
+
+function getMousePos(canvas, evt) {
+    var rect = canvas.getBoundingClientRect();
+    return {
+        x: (evt.clientX - rect.left)-7,
+        y: (evt.clientY - rect.top)-7
+    };
+}
+
+/** Setting Point*/
 function setPoint(x, y, edge=1, line_helper=0){        
     if(line_helper){
         x_position = x *dot
-        y_position = (ctx.canvas.height-dot)-y *dot
-    }else{
+        y_position = (ctx.canvas.height-dot)-y * dot
+    }
+    else{
         x_position = (x+center[0]) *dot
         y_position = (ctx.canvas.height-dot)-(y+center[1]) *dot
     }
     if(edge){
-    // with +1 dot edge
         x_position = x_position -dot
         y_position = y_position -dot
         ctx.fillRect(x_position, y_position, dot*3, dot*3)
-    }else{
-    // without edge
-        ctx.fillRect(x_position, y_position, dot, dot)
+    }
+    else{
+        ctx.fillRect(x_position, y_position, dot*2, dot*2)
     }
 }
-dot_color = 'white'
-line_color = 'gray'
+
+dot_color = 'blue'
+line_color = 'red'
 const dot = 1
 
 /** Draw Middle Point Here **/
