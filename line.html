@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Implementasi Algoritma DDA dan Bresenham</title>
+
+        <link rel="stylesheet" href="../css/makeup.css">
+    </head>
+    <body>
+        <h1>Algoritma DDA dan Bresenham</h1>
+        <div class="container">
+            <div class="visualizer">
+                <div class="bresenham">
+                    <canvas id="canvas" width="400" height="400"></canvas>
+                </div>
+                <form id="dataInput">
+                    <h2 class="headline">Input</h2>
+                    <span class="fieldTitle">Algoritma</span>
+                    <br><input type="radio" onClick="algSelectChange(this)" name="algSelect" value="DDA" checked="checked" >DDA<br>
+                    <input type="radio" onClick="algSelectChange(this)" name="algSelect" value="Bresenham">Bresenham<br>
+                    X1<input type="number" class="field"min="0" max="400" style='width:40px;margin:5px' id="boxX1">
+                    Y1<input type="number" class="field" min="0" max="400" style='width:40px;margin:5px' id="boxY1"><br>
+                    X2<input type="number" class="field"min="0" max="400" style='width:40px;margin:5px' id="boxX2">
+                    Y2<input type="number" class="field" min="0" max="400" style='width:40px;margin:5px' id="boxY2"><br>
+                    <input type="button" class="tombolS" onClick="Create()" value="Buat" />
+                    <button type="button" class="tombolR" id="clear" onclick="userReset()">Reset</button>
+                    <h2>Koordinat</h2>
+                    Posisi Mouse 
+                    X: <label id="xhover"></label>&nbsp;
+                    Y: <label id="yhover"></label><br>
+                    <div>
+                        X1: <label id="x1"></label>&nbsp;
+                        Y1: <label id="y1"></label>
+                    </div>
+                    <div>
+                        X2: <label id="x2"></label>&nbsp;
+                        Y2: <label id="y2"></label>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <hr class="separator">
+        <div class="intro">
+            <h2 style="text-align: center;">
+                About This Project
+            </h2>
+            <div class="content">
+            <p>
+                - Dibuat menggunakan canvas size 400 x 400 px <br>
+                - Letakan pointer pada kanvas untuk mengetahui Koordinat* <br>
+                - Garis dapat dibentuk menggunakan 2 cara : <br>
+                1. Click pointer, drag and release <br>
+                2. Input koordinat (max.400)
+            </p>
+        </div>
+        <footer>
+            &copy; M Humam Wahisyam | Yayang Kurnia 
+        </footer>
+
+        <script  src="../js/line.js"></script>
+    </body>
+</html>

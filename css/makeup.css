@@ -9,6 +9,14 @@ body.pushable{
     -webkit-font-smoothing: antialiased;
     -moz-font-smoothing: grayscale;
 }
+.contentner{
+	text-align: center;
+	margin: 250px auto;
+}
+.contentner a:link{
+	color: white;
+	text-decoration: none;
+}
 h1{
     text-align: center;
     margin: 20px 0 0 0;
