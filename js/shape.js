@@ -13,7 +13,7 @@ function draw() {
     } else if (shapeSelected === 'Rectangle') {
         rectangle();
     } else if (shapeSelected === 'Love') {
-        ctx.translate(120, 120);
+        ctx.translate(110, 140);
         love();
     }
     ctx.fill();
