@@ -10,13 +10,15 @@ function draw() {
     ctx.fillStyle = "rgb(" + red.value + "," + green.value + "," + blue.value + ")";
     if (shapeSelected === 'Circle') {
         circle();
+        ctx.fill();
     } else if (shapeSelected === 'Rectangle') {
         rectangle();
+        ctx.fill();
     } else if (shapeSelected === 'Love') {
         ctx.translate(110, 140);
         love();
+        ctx.fill();
     }
-    ctx.fill();
 }
 
 function circle() {
