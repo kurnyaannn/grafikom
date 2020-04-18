@@ -14,7 +14,7 @@ function draw() {
         rectangle();
     } else if (shapeSelected === 'Love') {
         ctx.translate(120, 120);
-        triangle();
+        love();
     }
     ctx.fill();
 }
