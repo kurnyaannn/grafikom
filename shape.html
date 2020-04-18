@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Grafikom</title>
+
+        <link rel="stylesheet" href="../css/makeup.css" type="text/css"/>
+    </head>
+    <body>
+        <h1>Shape Filling</h1>
+        <div class="container">
+            <div class="visualizer">
+                <div class="shape">
+                    <canvas width="400" height="400" id="shapeCanvas"></canvas>
+                </div>
+                <form id="dataInput">
+                    <h2 class="headline">Pilih Shape</h2>
+                    <select id="shape">
+                        <option value="circle">Circle</option>
+                        <option value="rectangle">Rectangle</option>
+                        <option value="triangle">Triangle</option>
+                    </select>
+                    <br><br><br><br><br><br>
+                    <h2 class="headline">Set Color</h2>
+                    R<input class="color" type="number" min="0" max="255" value="0" id="red">
+                    G<input class="color" type="number" min="0" max="255" value="0" id="green">
+                    B<input class="color" type="number" min="0" max="255" value="0" id="blue">
+                    <br> <br>
+                    <button type="button" class="tombolS" onclick="draw()">Create</button>
+                    <button type="button" class="tombolR" onclick="userReset()">Reset</button>
+                </form>
+            </div>
+        </div>
+        <hr class="separator">
+        <div class="intro">
+            <h2 style="text-align: center;">
+                About This Project
+            </h2>
+            <div class="content">
+                <p>
+                    - Dibuat menggunakan canvas size 400 x 400 px <br>
+                    - Pilih shape kemudian set warna
+                    - Harap reset setelah menentukan shape dan warna agar tidak terjadi remap canvas <br>
+                </p>
+                <p>
+                    <a href="https://www.w3schools.com/html/html5_canvas.asp">HTML 5 Canvas</a>
+                </p>
+            </div>
+            <footer>
+                &copy; M Humam Wahisyam | Yayang Kurnia
+            </footer>
+            
+        </div>
+
+        <script src="../js/shape.js"></script>
+    </body>
+</html>

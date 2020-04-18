@@ -25,6 +25,14 @@ canvas{
 	padding: 5px;
 	transform: scaleY(-1);
 }
+#shapeCanvas{
+	transform: scaleY(1);
+	padding: 5px;
+}
+#shapeCanvas{
+	padding: 5px;
+	border: solid black 1px;
+}
 .container {
     position: relative;
     max-width: 100%;
@@ -60,8 +68,12 @@ canvas{
 	margin: 15px;
 	overflow-x: visible;
 }
+.shape{
+	margin: 10px;
+	overflow-x: visible;
+}
 #dataInput{
-    padding: 25px 15px;
+    padding: 25px 0px;
 }
 .headline{
 	padding-top: 0px;
@@ -97,6 +109,10 @@ h2:after{
 	margin: 15px 0px;
     transition: .3s;
     border-radius: 5px;
+}
+.color{
+	width: 40px;
+	margin: 5px;
 }
 .field:hover{
 	background-color: rgba(0, 0, 0, 0.1);

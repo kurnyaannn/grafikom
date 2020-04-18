@@ -1,0 +1,36 @@
+<canvas id="canvas" width="300" height="300"></canvas>
+<br>
+Posição mouse 
+X: <label id="xhover"></label>&nbsp;
+Y: <label id="yhover"></label>
+<br>
+<div>
+X1: <label id="x1"></label>&nbsp;
+Y1: <label id="y1"></label>
+</div>
+<div>
+X2: <label id="x2"></label>&nbsp;
+Y2: <label id="y2"></label>
+</div>
+Cor
+<br>R<input type="number" min="0" max="255" value="0" style='width:40px;margin:5px' id="red">
+G<input type="number" min="0" max="255" value="0" style='width:40px;margin:5px' id="green">
+B<input type="number" min="0" max="255" value="0" style='width:40px;margin:5px' id="blue">
+<br>
+
+<input type="button" id="clear" value="clear">
+<input type="checkbox" id="smooth" />smooth
+<br><input type="radio" onClick="algSelectChange(this)" name="algSelect" value="DDA" checked="checked" >DDA
+<br><input type="radio" onClick="algSelectChange(this)" name="algSelect" value="Bresenham">Bresenham
+<br><input type="radio" onClick="algSelectChange(this)" name="algSelect" value="CohenS">CohenS
+<br><input type="radio" onClick="algSelectChange(this)" name="algSelect" value="LiangB">LiangB
+<br><input type="radio" onClick="algSelectChange(this)" name="algSelect" value="CohenS">CohenS
+<br><input type="radio" onClick="algSelectChange(this)" name="algSelect" value="Circunferencia">Circunferencia
+<hr>
+X<input type="number" min="0" max="300" style='width:40px;margin:5px' id="boxX">
+Y<input type="number" min="0" max="300" style='width:40px;margin:5px' id="boxY">
+<input type="button" onClick="Translation()" value="Translação" />
+<input type="button" onClick="Scale()" value="Escala" />
+<br>
+<br>
+<br>
